@@ -1,0 +1,44 @@
+{
+  "name": "three-mesh-ui",
+  "version": "4.4.1",
+  "description": "a library on top of three.js to help in creating 3D user interfaces",
+  "engines": {
+    "node": "x.x.x"
+  },
+  "main": "src/three-mesh-ui.js",
+  "scripts": {
+    "start": "node examples/app.js",
+    "test": "echo \"No test specified yet\"",
+    "lint": "eslint -c config/.eslintrc src",
+    "build": "npx webpack --config config/webpack.config.js",
+    "dev": "webpack-dev-server --config config/webpack.prodConfig.js --open --env.NODE_ENV=dev",
+    "heroku-postbuild": "npx webpack --config config/webpack.prodConfig.js --env.NODE_ENV=prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixmariotto/Three-Mesh-UI.git"
+  },
+  "keywords": [
+    "three.js",
+    "ui",
+    "user-interface"
+  ],
+  "author": "felix mariotto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felixmariotto/Three-Mesh-UI/issues"
+  },
+  "homepage": "https://github.com/felixmariotto/Three-Mesh-UI#readme",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "express": "^4.17.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "three": "^0.119.0"
+  }
+}
